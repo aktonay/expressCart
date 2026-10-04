@@ -4,11 +4,11 @@
   "description": "A fully functioning Node.js shopping cart with Stripe, PayPal and Authorize.net payments.",
   "private": false,
   "scripts": {
-    "start": "node app.js",
+    "start": "node api.js && node app.js",
     "deploy": "node deploy.js",
     "testdata": "node lib/testdata.js",
     "test": "ava",
-    "dev": " pm2-dev start app.js",
+    "dev": "node api.js && pm2-dev start app.js",
     "lint": "eslint ./"
   },
   "ava": {
