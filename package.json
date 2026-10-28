@@ -4,11 +4,11 @@
   "description": "A fully functioning Node.js shopping cart with Stripe, PayPal and Authorize.net payments.",
   "private": false,
   "scripts": {
-    "start": "node app.js",
+    "start": "node api.js && node app.js",
     "deploy": "node deploy.js",
     "testdata": "node lib/testdata.js",
     "test": "ava",
-    "dev": " pm2-dev start app.js",
+    "dev": "node api.js && pm2-dev start app.js",
     "lint": "eslint ./"
   },
   "ava": {
@@ -61,7 +61,7 @@
     "morgan": "^1.9.1",
     "multer": "^1.4.2",
     "node-cron": "^2.0.3",
-    "nodemailer": "^6.4.16",
+    "nodemailer": "^10.1.4",
     "numeral": "^2.0.6",
     "object-hash": "^2.0.1",
     "paypal-rest-sdk": "^1.6.9",
